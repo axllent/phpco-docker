@@ -1,11 +1,11 @@
-FROM php:7.3-cli-alpine
+FROM php:7.4-cli-alpine
 
 # Install PHP CodeSniffer
-ARG PHPCS_RELEASE="3.4.2"
+ARG PHPCS_RELEASE="3.5.4"
 RUN pear install PHP_CodeSniffer-$PHPCS_RELEASE
 
 # Install the PHPCompatibility standard
-ARG PHPCOMP_RELEASE="9.1.1"
+ARG PHPCOMP_RELEASE="9.3.5"
 RUN set -eux &&\
     apk --no-cache add git &&\
     mkdir -p "/opt/" &&\
