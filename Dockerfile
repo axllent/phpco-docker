@@ -1,7 +1,7 @@
-FROM php:7.4-cli-alpine
+FROM php:8.0-cli-alpine
 
 # Install PHP CodeSniffer
-ARG PHPCS_RELEASE="3.5.4"
+ARG PHPCS_RELEASE="3.6.0"
 RUN pear install PHP_CodeSniffer-$PHPCS_RELEASE
 
 # Install the PHPCompatibility standard
